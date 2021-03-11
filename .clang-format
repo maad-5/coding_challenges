@@ -1,0 +1,12 @@
+---
+Language: Cpp
+BasedOnStyle: Microsoft
+Standard: c++20
+
+AllowShortFunctionsOnASingleLine: Inline
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: false
+BreakBeforeBraces: Stroustrup
+InsertTrailingCommas: Wrapped
+PointerAlignment: Left
+...
