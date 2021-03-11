@@ -1,0 +1,6 @@
+# End of lines LF normalization
+* text=auto
+
+# C++
+*.cpp text
+*.hpp text
