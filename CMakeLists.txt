@@ -10,6 +10,7 @@ include(GoogleTest)
 enable_testing()
 
 add_subdirectory(design)
+add_subdirectory(sorts)
 add_subdirectory(strings)
 
 find_package(Doxygen)
