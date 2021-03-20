@@ -9,7 +9,7 @@
 
 namespace singly {
 
-/// @brief Reverse a list.
+/// Reverse a list.
 ///
 /// @param[in] head A pointer to the head node of a list.
 ///

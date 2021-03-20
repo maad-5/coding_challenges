@@ -5,7 +5,7 @@
 
 namespace numbers {
 
-/// @brief Return the length of the largest binary gap of a positive integer.
+/// Return the length of the largest binary gap of a positive integer.
 ///
 /// @remark A _binary gap_ of a positive integer is any maximal sequence of
 /// consecutive zeros that is surrounded by ones in its binary representation.

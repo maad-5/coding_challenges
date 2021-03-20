@@ -7,7 +7,7 @@
 
 namespace sorts {
 
-/// @brief Perform a regular bubble sort, in-place.
+/// Perform a regular bubble sort, in-place.
 void bubble(std::vector<int>& v) noexcept;
 
 } // namespace sorts

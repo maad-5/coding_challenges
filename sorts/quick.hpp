@@ -7,7 +7,7 @@
 
 namespace sorts {
 
-/// @brief Perform a regular quick sort, in-place.
+/// Perform a regular quick sort, in-place.
 void quick(std::vector<int>& v) noexcept;
 
 } // namespace sorts

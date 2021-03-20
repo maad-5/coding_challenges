@@ -7,7 +7,7 @@
 
 namespace sorts {
 
-/// @brief Perform a regular heap sort, in place.
+/// Perform a regular heap sort, in place.
 void heap(std::vector<int>& v) noexcept;
 
 } // namespace sorts

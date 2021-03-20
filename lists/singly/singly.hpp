@@ -8,13 +8,13 @@
 
 namespace singly {
 
-/// @brief A singly list node.
+/// A singly list node.
 struct Node final {
     int value{0};
     std::shared_ptr<Node> next;
 };
 
-/// @brief Create a new list from the input array.
+/// Create a new list from the input array.
 std::shared_ptr<Node> new_list(const std::vector<int>& v);
 
 } // namespace singly

@@ -8,7 +8,7 @@
 
 namespace numbers {
 
-/// @brief Convert a string of roman numerals to a decimal number.
+/// Convert a string of roman numerals to a decimal number.
 ///
 /// @note Constraints:
 ///     - @p roman is made of the letters 'I', 'V', 'X', 'L', 'C', 'D' and 'M'
@@ -19,7 +19,7 @@ namespace numbers {
 ///     - invalid subtract cases (e.g. "IIX", "IXI", "VL")
 int roman_to_decimal(std::string_view roman) noexcept;
 
-/// @brief Convert a decimal number to a string of roman numerals.
+/// Convert a decimal number to a string of roman numerals.
 ///
 /// @note Constraints:
 ///     - @p decimal is within the range `[1..3999]`.

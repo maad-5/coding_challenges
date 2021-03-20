@@ -7,7 +7,7 @@
 
 namespace sorts {
 
-/// @brief Perform a regular merge sort, in-place.
+/// Perform a regular merge sort, in-place.
 void merge(std::vector<int>& v) noexcept;
 
 } // namespace sorts

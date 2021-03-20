@@ -7,7 +7,7 @@
 
 namespace sorts {
 
-/// @brief Perform a regular selection sort, in-place.
+/// Perform a regular selection sort, in-place.
 void selection(std::vector<int>& v) noexcept;
 
 } // namespace sorts

@@ -5,7 +5,7 @@
 
 namespace numbers {
 
-/// @brief Compute the digital root of a positive integer.
+/// Compute the digital root of a positive integer.
 ///
 /// @remark The _digital root_ of a positive integer is the recursive sum of
 /// its digits, until a single digit remains: e.g.

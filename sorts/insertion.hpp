@@ -7,7 +7,7 @@
 
 namespace sorts {
 
-/// @brief Perform a regular insertion sort, in-place.
+/// Perform a regular insertion sort, in-place.
 void insertion(std::vector<int>& v) noexcept;
 
 } // namespace sorts
