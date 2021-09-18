@@ -1,3 +1,4 @@
+#include <optional>
 #include <stdexcept>
 
 #include <gtest/gtest.h>
@@ -23,8 +24,8 @@ TEST(lru_cache, basic__put_get)
     EXPECT_EQ(cache.get(0), "0");
     EXPECT_EQ(cache.get(1), "1");
 
-    EXPECT_EQ(cache.get(2), "");
-    EXPECT_EQ(cache.get(3), "");
+    EXPECT_EQ(cache.get(2), std::nullopt);
+    EXPECT_EQ(cache.get(3), std::nullopt);
 
     EXPECT_EQ(cache.get_size(), 2);
     EXPECT_EQ(cache.get_capacity(), 2);
@@ -63,8 +64,8 @@ TEST(lru_cache, basic__put_rotation)
     cache.put(2, "2");
     cache.put(3, "3");
 
-    EXPECT_EQ(cache.get(0), "");
-    EXPECT_EQ(cache.get(1), "");
+    EXPECT_EQ(cache.get(0), std::nullopt);
+    EXPECT_EQ(cache.get(1), std::nullopt);
     EXPECT_EQ(cache.get(2), "2");
     EXPECT_EQ(cache.get(3), "3");
 
@@ -81,8 +82,8 @@ TEST(lru_cache, usecase)
 
     EXPECT_EQ(cache.get(3), "3");
     EXPECT_EQ(cache.get(0), "0");
-    EXPECT_EQ(cache.get(5), "");
-    EXPECT_EQ(cache.get(1), "");
+    EXPECT_EQ(cache.get(5), std::nullopt);
+    EXPECT_EQ(cache.get(1), std::nullopt);
 
     cache.put(0, "00");
 
@@ -101,8 +102,8 @@ TEST(lru_cache, usecase)
     EXPECT_EQ(cache.get_size(), 5);
     EXPECT_EQ(cache.get_capacity(), 5);
 
-    EXPECT_EQ(cache.get(3), "");
-    EXPECT_EQ(cache.get(0), "");
+    EXPECT_EQ(cache.get(3), std::nullopt);
+    EXPECT_EQ(cache.get(0), std::nullopt);
 }
 
 } // namespace

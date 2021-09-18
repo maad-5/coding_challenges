@@ -19,17 +19,17 @@ LRU_Cache::LRU_Cache(std::size_t capacity) : m_capacity{capacity}
     m_tail->prev = m_head;
 }
 
-std::string LRU_Cache::get(int key)
+std::optional<std::string> LRU_Cache::get(int key)
 {
     if (auto I = m_cache.find(key); I != m_cache.end()) {
         move_front(I->second);
         return I->second->value;
     }
 
-    return "";
+    return {};
 }
 
-void LRU_Cache::put(int key, std::string value)
+void LRU_Cache::put(int key, std::string_view value)
 {
     if (auto I = m_cache.find(key); I != m_cache.end()) {
         move_front(I->second);
@@ -48,9 +48,9 @@ void LRU_Cache::put(int key, std::string value)
     m_cache[key] = new_node;
 }
 
-// =============================================================================
+// =====================================================================================================================
 
-void LRU_Cache::push_front(std::shared_ptr<Node> node)
+void LRU_Cache::push_front(std::shared_ptr<Node>& node)
 {
     // attach node to list
     node->next = m_head->next;
@@ -61,7 +61,7 @@ void LRU_Cache::push_front(std::shared_ptr<Node> node)
     node->next->prev = node;
 }
 
-void LRU_Cache::move_front(std::shared_ptr<Node> node)
+void LRU_Cache::move_front(std::shared_ptr<Node>& node)
 {
     // remove node from list
     node->prev.lock()->next = node->next;
